@@ -1,5 +1,7 @@
 <?php
 declare(strict_types=1);
+namespace b4b31;
+
 /**
  * Reads strings by id from a compiled <name>.idx / <name>.dat pair,
  * as produced by build_string_files.php.
