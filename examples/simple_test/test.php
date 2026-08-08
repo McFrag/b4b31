@@ -1,15 +1,14 @@
 <?php
 
-require_once "../../inc/b4b31/string_monger.php";
+declare(strict_types=1);
 
-function id_not_found($id, $f){
-    echo "\nid $id not found in $f\n";
-    return false;
-}
+require_once __DIR__ . '/../../inc/b4b31/string_monger.php';
 
-$x = new b4b31\string_monger('./1033','id_not_found');
+use b4b31\string_monger;
 
-var_dump($x(1));
-var_dump($x(3));
-var_dump($x(18));
-var_dump($x(19));
+$monger = new string_monger(__DIR__ . '/1032');
+
+var_dump($monger(0));
+var_dump($monger(1));
+var_dump($monger(0x12));
+var_dump($monger(0x9999));
