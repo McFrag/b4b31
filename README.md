@@ -144,6 +144,17 @@ SQL queries, or concurrent writers.
 
     examples/
 
+
+## Tests
+
+The test suite has no external dependencies:
+
+```sh
+php tests/run.php
+```
+
+GitHub Actions runs the syntax checks and test suite on PHP 7.4 through PHP 8.5.
+
 ## License
 
 MIT License.

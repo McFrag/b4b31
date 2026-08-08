@@ -119,10 +119,8 @@ while (($entry = readdir($handle)) !== false) {
     }
 
     if (isset($records[$id])) {
-        fwrite(
-            STDERR,
-            'Warning: duplicate id ' . dechex($id) . " (file {$entry}) - overwriting previous entry\n"
-        );
+        closedir($handle);
+        fail('Duplicate id ' . dechex($id) . " (file {$entry})");
     }
 
     $records[$id] = $content;
